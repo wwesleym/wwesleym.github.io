@@ -1,0 +1,8 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore all text files
+*.txt
+
+# Ignore /env folder in same directory 
+/env
