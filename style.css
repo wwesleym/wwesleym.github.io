@@ -1,8 +1,25 @@
+@media screen and (max-width: 992px) {
+    body {
+        background-color:antiquewhite;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color:azure;
+    }
+}
+
 h1 {
     font-size: 5em;
     text-align: center;
     font-family: 'Cambria';
-    color:crimson
+    color:red
+}
+
+body {
+    font-family: 'Cambria';
+    background-color:honeydew
 }
 
 #profile_pic {
@@ -16,13 +33,21 @@ h2 {
     font-size: 3em;
     text-align: center;
     font-family: 'Cambria';
-    color:darkred
+    color:crimson
 }
 
 ul {
     font-size: 2em;
+    display: table;
+    margin: 0 auto;
+    color:crimson
 }
 
 .social_icon {
     height: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
 }
