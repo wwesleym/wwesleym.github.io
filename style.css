@@ -1,0 +1,12 @@
+h1 {
+    font-size: 5em;
+    color:crimson
+}
+
+#profile_pic {
+    height: 200px;
+}
+
+.social_icon {
+    height: 50px;
+}
