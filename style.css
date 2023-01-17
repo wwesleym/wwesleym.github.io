@@ -95,21 +95,15 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin: 0 auto 20px auto;
 	padding-top: 50px;
     font-family:'Cambria';
+    gap: 4em;
 }
 
 #profile_pic {
 	height: 500px;
 	border: 5px solid #FFF;
 	border-radius: 150px;
-}
-
-#about_bio {
-	text-align: left;
-	max-width: 550px;
-    padding-left: 50px;
 }
 
 #about_bio h2 {
@@ -127,7 +121,7 @@ header {
 }
 
 #about_bio ul {
-    width: 400px;
+    max-width: 400px;
 }
 
 #about_bio li {
@@ -142,7 +136,7 @@ header {
 #projects {
     text-align: center;
     padding-top: 50px;
-    padding-bottom:50px;
+    padding-bottom: 50px;
     font-family: 'Cambria';
 }
 
@@ -197,26 +191,13 @@ header {
 	margin: 0 auto 20px auto;
 	padding-top: 50px;
     font-family:'Cambria';
-}
-
-#codepath-pic {
-    width: 550px;
-    height: 350px;
-    position:relative;
-    border-radius: 10px;
+    gap: 5%;
 }
 
 #amazon-pic {
-    width: 200px;
+    width: 250px;
     height: auto;
-    position:absolute;
-    left:400px;
-    top:1975px;
     border-radius: 50px;
-}
-
-#experience-text {
-    padding-left: 50px;
 }
 
 #experience h3 {
@@ -227,13 +208,14 @@ header {
 }
 
 #experience ul {
-    width:600px;
+    max-width:600px;
     color:sienna;
     font-size: x-large;
 }
 
 #experience li {
     margin-bottom:20px;
+    overflow-wrap: break-word;
 }
 
 /* FOOTER */
@@ -241,7 +223,7 @@ header {
 footer {
 	text-align: center;
 	clear: both;
-	padding-top: 200px;
+	padding-top: 100px;
 	margin-bottom: 20px;
 }
 
@@ -263,6 +245,47 @@ footer li {
 
 
 /* MEDIA */
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color:aliceblue;
+        height: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about_bio {
+        margin: auto;
+    }
+    
+    #profile_pic {
+        border-radius: 100px;
+        margin: auto;
+    }
+
+    #project-list {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    #experience {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    #experience-text {
+        margin: auto;
+    }
+
+    #amazon-pic {
+        margin: auto;
+        width: 200px;
+    }
+}
 
 @media screen and (max-width: 600px) {
     body {
@@ -289,44 +312,8 @@ footer li {
         flex-direction: column;
         margin: auto;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        background-color:aliceblue;
-        height: 100%;
-    }
-
-    #about {
-        flex-direction: column;
-        margin: auto;
-    }
-    
-    #profile_pic {
-        border-radius: 100px;
-        margin: auto;
-    }
-
-    #project-list {
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    #experience {
-        flex-direction: column;
-        margin: auto;
-    }
-
-    #codepath-pic {
-        border-radius: 10px;
-        margin: auto;
-    }
 
     #amazon-pic {
-        position: relative;
-        border-radius: 10px;
-        margin: auto;
-        top:0px;
-        left:0px;
+        width: 150px;
     }
 }
