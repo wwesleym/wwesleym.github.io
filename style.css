@@ -100,12 +100,6 @@ header {
     gap: 4em;
 }
 
-#profile_pic {
-	height: 500px;
-	border: 5px solid #FFF;
-	border-radius: 150px;
-}
-
 #about_bio h2 {
 	color: crimson;
 	font-size: 3em;
@@ -120,9 +114,9 @@ header {
     font-weight: bold;
 }
 
-/* #about_bio ul {
+#about_bio ul {
     max-width: 400px;
-} */
+}
 
 #about_bio li {
 	color:sienna;
@@ -194,12 +188,6 @@ header {
     gap: 5%;
 }
 
-#amazon-pic {
-    width: 250px;
-    height: auto;
-    border-radius: 50px;
-}
-
 #experience h3 {
     color:firebrick;
 	font-size: 2em;
@@ -260,11 +248,6 @@ footer li {
     #about_bio {
         margin: auto;
     }
-    
-    #profile_pic {
-        border-radius: 100px;
-        margin: auto;
-    }
 
     #project-list {
         flex-wrap: wrap;
@@ -280,11 +263,6 @@ footer li {
     #experience-text {
         margin: auto;
     }
-
-    #amazon-pic {
-        margin: auto;
-        width: 200px;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -297,11 +275,6 @@ footer li {
         flex-direction: column;
         margin: auto;
     }
-    
-    #profile_pic {
-        border-radius: 100px;
-        margin: auto;
-    }
 
     #project-list {
         flex-wrap: wrap;
@@ -311,9 +284,5 @@ footer li {
     #experience {
         flex-direction: column;
         margin: auto;
-    }
-
-    #amazon-pic {
-        width: 150px;
     }
 }
