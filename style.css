@@ -120,9 +120,9 @@ header {
     font-weight: bold;
 }
 
-#about_bio ul {
+/* #about_bio ul {
     max-width: 400px;
-}
+} */
 
 #about_bio li {
 	color:sienna;
