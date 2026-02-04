@@ -35,19 +35,6 @@ header {
 }
 
 
-/* NAVBAR */
-#navbarNav {
-    padding-top: 1%;
-    font-size:medium;
-    font-family:'Cambria';
-}
-
-.nav-link {
-    color:maroon;
-    font-weight: bold;
-    font-size:larger;
-    
-}
 
 /* COVER */
 #cover {
@@ -56,7 +43,7 @@ header {
 
 #cover h1 {
 	color: red;
-	font-size: 6em; 
+	font-size: 4em; 
 	font-style: normal;
 	font-weight: bold;
     font-family:'Cambria';
@@ -89,122 +76,6 @@ header {
 	margin: 10px;
 }
 
-/* ABOUT */
-
-#about {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-top: 50px;
-    font-family:'Cambria';
-    gap: 4em;
-}
-
-#about_bio h2 {
-	color: crimson;
-	font-size: 3em;
-	margin: 10px 0 0.5em 0;
-    font-weight: bold;
-}
-
-#about_bio h3 {
-	color:firebrick;
-	font-size: 2em;
-	margin: 10px 0 0.5em 0;
-    font-weight: bold;
-}
-
-#about_bio ul {
-    max-width: 400px;
-}
-
-#about_bio li {
-	color:sienna;
-    font-size: x-large;
-    margin-bottom:20px;
-}
-
-
-/* PROJECTS */
-
-#projects {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: 'Cambria';
-}
-
-#projects h3 {
-    color:firebrick;
-	font-size: 2em;
-    margin: 10px 0 0.5em 0;
-    font-weight: bold;
-}
-
-.project-list {
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4em;
-}
-
-.project {
-    text-align: left;
-    width: 350px;
-	background-color:lightsalmon;
-	padding: 1em;
-	border-radius: 10px;
-    color:black;
-}
-
-.project h4 {
-    font-weight: bold;
-}
-
-.project img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-	object-position:top;
-    padding-bottom: 10px;
-}
-
-.project a {
-    color:black;
-    text-decoration:underline;
-    font-weight: bold;
-}
-
-
-/* EXPERIENCE */
-#experience {
-    display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin: 0 auto 20px auto;
-	padding-top: 50px;
-    font-family:'Cambria';
-    gap: 5%;
-}
-
-#experience h3 {
-    color:firebrick;
-	font-size: 2em;
-    margin: 10px 0 0.5em 0;
-    font-weight: bold;
-}
-
-#experience ul {
-    max-width:600px;
-    color:sienna;
-    font-size: x-large;
-}
-
-#experience li {
-    margin-bottom:20px;
-    overflow-wrap: break-word;
-}
 
 /* FOOTER */
 
@@ -239,50 +110,11 @@ footer li {
         background-color:aliceblue;
         height: 100%;
     }
-
-    #about {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #about_bio {
-        margin: auto;
-    }
-
-    #project-list {
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    #experience {
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    #experience-text {
-        margin: auto;
-    }
 }
 
 @media screen and (max-width: 600px) {
     body {
         background-color:azure;
         height: 100%;
-    }
-
-    #about {
-        flex-direction: column;
-        margin: auto;
-    }
-
-    #project-list {
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    #experience {
-        flex-direction: column;
-        margin: auto;
     }
 }
