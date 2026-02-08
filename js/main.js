@@ -1,9 +1,34 @@
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+function liftItem(item, dropDistance) {
+    if (isTouchDevice) {
+        // mobile: directly apply transform to item so lift works
+        item.style.transition = "transform 0.9s ease-in-out";
+        item.style.transform = `translateY(-${dropDistance}px)`;
+    } else {
+        // desktop: update CSS variable so hover tilt works
+        item.style.transition = "transform 0.9s ease-in-out";
+        item.style.setProperty("--translate-y", `-${dropDistance}px`);
+    }
+}
+
+function resetItem(item) {
+    if (isTouchDevice) {
+        item.style.transition = "transform 0.6s ease";
+        item.style.transform = `translateY(0px)`;
+    } else {
+        item.style.transition = "transform 0.6s ease";
+        item.style.setProperty("--translate-y", "0px");
+    }
+}
+
 const items = document.querySelectorAll(".item");
 const detailView = document.getElementById("detail-view");
 const detailContent = document.getElementById("detail-content");
 const closeBtn = document.getElementById("close-detail");
 const machine = document.querySelector(".machine-frame");
 const claw = document.getElementById("claw");
+
 
 items.forEach(item => {
     item.addEventListener("click", () => {
@@ -38,16 +63,14 @@ items.forEach(item => {
                 claw.style.transform = `translate(${moveX}px, 0px)`;
 
                 // move item up
-                item.style.transition = "transform 0.9s ease-in-out";
-                item.style.setProperty("--translate-y", `-${dropDistance}px`);
+                liftItem(item, dropDistance);
 
                 setTimeout(() => {
                     // open detail panel
                     openDetail(item.dataset.target, () => {
                         // reset claw and item after detail panel is closed
-                        item.style.transition = "transform 0.6s ease";
-                        item.style.setProperty("--translate-y", "0px");
-
+                        resetItem(item);
+                        
                         claw.style.transition = "transform 0.6s steps(6)";
                         claw.style.transform = "translate(0px, 0px)";
 
