@@ -110,10 +110,7 @@ body {
 /* VIEWING ITEM */
 #detail-view {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +129,8 @@ body {
     border-radius: 12px;
     padding: 32px;
     max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
     width: 80%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -217,6 +216,16 @@ body {
         max-width: 90px;
         padding: 8px 3px;
         font-size: 14px;
+    }
+
+    #detail-content {
+        max-height: 85vh;
+        width: 90%;
+        padding: 20px;
+    }
+
+    #close-detail {
+        font-size: 36px;
     }
 
     #gallery {
