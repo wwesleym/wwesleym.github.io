@@ -10,23 +10,140 @@ WRITTEN BY: Wesley Ma
   <meta name="author" content="Wesley Ma">
   <meta name="description" content="Personal website">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="images/logo.ico">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HD4NGX4SX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3HD4NGX4SX');
+  </script>
   <title>wesley's worldwide website</title>
 </head>
-<body>
 
-  <br><br><br><br><br><br>
+<body>
   <div id="cover">
     <h1>wesley ma</h1>
   </div>
+  <div id="app">
+    <section id="machine">
+      <div class="machine-frame">
+
+        <div id="claw-container">
+          <svg id="claw" width="60" height="80" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Connector -->
+            <circle cx="32" cy="8" r="6" fill="#444" stroke="#000" stroke-width="2" />
+            <!-- Left prong -->
+            <path d="M28 14 C12 30 10 50 18 70" stroke="#666" stroke-width="4" fill="none" stroke-linecap="round" />
+            <!-- Middle prong -->
+            <path d="M32 14 C32 30 32 50 32 70" stroke="#666" stroke-width="4" fill="none" stroke-linecap="round" />
+            <!-- Right prong -->
+            <path d="M36 14 C52 30 54 50 46 70" stroke="#666" stroke-width="4" fill="none" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <div class="items">
+          <button class="item" data-target="boba">boba</button>
+          <button class="item" data-target="experience">experience</button>
+          <button class="item" data-target="about">about</button>
+          <button class="item" data-target="cracky">cracky</button>
+          <button class="item" data-target="gallery">gallery</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="detail-view" hidden>
+      <div id="detail-content">
+        <button id="close-detail" aria-label="Close">×</button>
+        <div id="detail-body"></div>
+      </div>
+    </section>
+
+    <!-- hidden content for each section -->
+    <div id="detail-content-data" hidden>
+      <div data-type="boba">
+        <h2><a href="https://www.notion.so/Boba-App-Case-Study-2e8e79bf45b980779d99e82d068e5758?source=copy_link"
+            target="_blank">boba app case study</a></h2>
+        <p>lil case study about my boba app, showcasing ux/ui design and fun features</p>
+        <hr>
+        <h2>top 3 boba spots in the bay area (unsorted)</h2>
+        <p>
+          <b><u>ten ren tea</u></b> - authentic tea at a reasonable price, a must-get if you're in the area
+          <br> rec: jasmine milk green tea • 75% sweet • 25% ice • green tea egg pudding
+          <br><br>
+          <b><u>tp tea</u></b> - perfectly balanced milk teas that always hit the spot
+          <br> rec: tieguanyin milk tea • 80% sweet • less ice • boba
+          <br><br>
+          <b><u>sunright tea studio</u></b> - refreshing fruit teas perfect for any season
+          <br> rec: sunright fruit tea • 75% sweet • less ice • honey boba
+        </p>
+      </div>
+
+      <div data-type="experience">
+        <h2>places i worked</h2>
+        <p>
+          <b>amazon web services</b><br>
+          software development engineer
+          <br><br>
+          <b>amazon</b><br>
+          software development engineer intern
+          <br><br>
+          <b>codepath</b><br>
+          cybersecurity tech fellow
+          <br><br>
+          <b>uc irvine</b><br>
+          undergraduate research assistant
+        </p>
+      </div>
+
+      <div data-type="about">
+        <h2>hello (:</h2>
+        <p>
+          thank you for visiting my silly lil website!
+          <br><br>
+          <a href="https://www.linkedin.com/in/wwesleym/" target="_blank">linkedin</a>
+          <br>
+          <a href="https://github.com/wwesleym" target="_blank">github</a>
+        </p>
+      </div>
+
+      <div data-type="cracky">
+        <h2><a href="https://wwesleym.github.io/cracky/" target="_blank">cracky</a></h2>
+        <p>fun numbers game i made (it's like wordle but better)</p>
+      </div>
+
+      <div data-type="gallery">
+        <h2>gallery</h2>
+        <p>enjoy some of my random doodles</p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/anteater_doodle.jpg" alt="anteater doodle">
+          </div>
+          <div class="gallery-item">
+            <img src="images/demonslayer_doodle.jpg" alt="demon slayer doodle">
+          </div>
+          <div class="gallery-item">
+            <img src="images/gradcap_doodle.jpg" alt="grad cap doodle">
+          </div>
+          <div class="gallery-item">
+            <img src="images/onepiece_doodle.png" alt="one piece doodle">
+          </div>
+          <div class="gallery-item">
+            <img src="images/aizawa_doodle.jpg" alt="aizawa doodle">
+          </div>
+          <div class="gallery-item">
+            <img src="images/atla_doodle.jpg" alt="atla doodle">
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-<footer>
-  <ul>
-    <li><a href="https://github.com/wwesleym" target="_blank"><img src="images/github.png" class="social_icon" alt="github icon"></a></li>
-    <li><a href="https://linkedin.com/in/wwesleym" target="_blank"><img src="images/linkedin.png" class="social_icon" alt="linkedin icon"></a></li>
-  </ul>
-</footer>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
